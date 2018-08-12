@@ -1,10 +1,5 @@
-document.addEventListener('DOMContentLoaded', function(){  
-  var wrapper = document.createElement("div");
-  var mycanvas = document.createElement("canvas");
-  wrapper.setAttribute("id", "preloader");
-  mycanvas.setAttribute("id", "sotatekCanvas");
-
-  var canvas = mycanvas;
+document.addEventListener('DOMContentLoaded', function(){
+  var canvas = document.getElementById("sotatekCanvas");
   var ctx = canvas.getContext('2d');
 
   let drawSemiCircle = (x, y, posStart, posEnd, r=50)=>{
@@ -126,8 +121,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
   // START
-  wrapper.appendChild(mycanvas);
-  document.body.appendChild(wrapper);
   updateUI();
 
   (function animloop(){

@@ -2787,6 +2787,9 @@ input[type="email"] {
 body {
   background-color: #f8f8f8;
   font-family: "fontBase"; }
+  body.hide {
+    opacity: 0;
+    visibility: hidden; }
 
 .header-01 {
   padding: 15px 25px;

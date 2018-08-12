@@ -1,6 +1,8 @@
 jQuery(document).ready(function($) {
+	$('header, section, footer').addClass('hide');
 	setTimeout(()=>{
 		$('#preloader').addClass('hide');
+		$('body').removeClass('hide');
 	}, 2000)
 
 	//trigger-mobile click
