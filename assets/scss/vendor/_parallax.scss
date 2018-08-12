@@ -1,0 +1,12 @@
+.parallax {
+  overflow: hidden;
+  position: relative;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  > * {
+    z-index: 10;
+    position: relative;
+  }
+}

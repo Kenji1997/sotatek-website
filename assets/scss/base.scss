@@ -1,0 +1,66 @@
+@import 'vendor/_include-media.scss';
+@import 'vendor/_position.scss';
+$breakpoints: (xs: 320px,sm: 560px, md: 768px, lg: 992px, xl: 1200);
+
+body {
+	color: #223547;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: 'Roboto', Arial, sans-serif, serif;
+	transition: all 0.3s ease-in-out;
+}
+
+.oh {
+	overflow: hidden;
+}
+
+.row.no-wrapper > div[class^="col-"]{
+	padding: 0;
+}
+
+@include media('<md') {
+	.row.no-wrapper-xs > div[class^="col-"]{
+		padding: 0;	
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+    user-select: none;
+}
+
+ul {
+	list-style: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+}
+
+input[type=text],
+input[type="email"] {
+	-webkit-appearance: none;
+}
+
+// useful class
+@each $x in {
+	.mt-#{$x} {
+		margin-top: #{$x + 'px' };
+	}
+}
+
+@each $x in {
+	.mr-#{$x} {
+		margin-right: #{$x + 'px' };
+	}
+}
+
+@each $x in {
+	.mb-#{$x} {
+		margin-bottom: #{$x + 'px' };
+	}
+}

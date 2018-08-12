@@ -1,0 +1,983 @@
+@import 'vendor/_include-media.scss';
+@import 'vendor/_center.scss';
+@import 'vendor/_position.scss';
+$breakpoints: (xs: 320px, sm: 560px, md: 768px, lg: 992px, xl: 1200px);
+@include media ('<375px') {
+	
+}
+
+@include media ('>=sm') {
+	
+}
+
+@include media('>=md') {
+	.hero-section-01 {
+
+		.hero-section__img-wrapper {
+
+			.hero-section__img {
+				position: static;
+				height: auto;
+				width: 100%;
+				transform: translateX(0);
+			}
+		}
+
+		.hero-section__text-01 {
+			padding: 35px;
+			// transform: translateY(28%);
+			margin-top: -25%;
+			max-width: 1500px;
+
+			.hero-section__title-01 {
+				float: left;
+				font-size: 3.5rem;
+				max-width: 70%;
+				margin-bottom: 0;
+				letter-spacing: 2px;
+			}
+
+			.hero-section__button {
+				float: right;
+				@include centerY;
+				right: 35px;
+			}
+
+			&:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+		}
+	}
+
+	.hero-section-02 {
+		padding: 130px 0 90px;
+
+		.hero-section__img-wrapper {
+			width: 70%;
+		}
+
+		.hero-section__text-01 {
+			padding-left: 30px;
+
+			.hero-section__title-01 {
+				font-size: 3.75rem;
+				line-height: 1;
+			}
+		}
+	}
+
+	.brand-01 {
+		.brand__title {
+			margin-bottom: 40px;
+		}
+	}
+
+	.portpolio-group {
+		.grid-item {
+			margin-bottom: 0;
+		}
+	}
+
+	.different-01 .textbox__text-content {
+		background-color: transparent;
+	}
+
+	.services-01__wrapper {
+		.title-01--02 {
+			width: 90%;
+			margin: 0 auto 10px;
+		}
+
+		.services-01 {
+			width: calc(90% + 30px);
+			margin: auto !important;
+
+			.grid-item {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.feature-01-wrapper {
+		padding: 30px 0;
+	}
+
+	.partner-01__wrapper {
+		.title-01 {
+			font-size: 1.875rem;
+			max-width: 70%;
+			margin-left: 3%;
+		}
+	}
+
+	.contact {
+		.left-box,
+		.right-box {
+			.box-content {
+				padding: 30px 5%;
+			}
+		}
+	}
+
+	.services-list {
+		.services-list-content {
+			padding: 40px 5%;
+
+			.text {
+				margin-bottom: 70px;
+			}
+
+			.services-gropup {
+				.grid-item {
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+
+	.footer-01 {
+		.footer-content {
+			width: 90%;
+			margin: 0 auto;
+			max-width: 1500px;
+		}
+
+		.footer-link-group {
+			font-size: 0;
+			
+			.link {
+				width: 60%;
+				display: inline-block;
+				
+				a {
+					margin-right: 15px;
+					width: auto;
+				}
+			}
+
+
+			.social-01 {
+				display: inline-block;
+				width: 40%;
+				text-align: right;
+			}
+		}
+	}
+	
+	.service-item {
+		.box-right {
+			.link-group {
+				@include grid-01( 1, 2, 2, 15px, 20px);
+
+				.grid-item {
+					position: relative;
+					margin-bottom: 0;
+
+					.textbox-06 {
+						position: relative;
+						height: 100%;
+						border: 1px solid #d2d2d7;
+						padding: 30px;
+					}
+				}
+			}
+		}
+	}
+
+	.portpolio-tag,
+	.ideas-tag {
+		.content {
+			font-size: 0;
+		}
+
+		.title {
+			display: block;
+			@include font(0.875, null, #69696c);
+			text-transform: uppercase;
+			display: inline-block;
+			width: 140px;
+			padding-right: 40px;
+			vertical-align: top;
+			text-align: right;
+			letter-spacing: 3px;
+		}
+
+		.tag-group {
+			display: inline-block;
+			width: calc(100% - 140px);
+
+			.tag-item {
+				background-color: #f0f0f4;
+				font-size: 0.875rem;
+				margin: 0 20px 20px 0;
+				padding: 15px 17px;
+
+				&.active {
+					background-color: #fff;
+				}
+			}
+		}
+	}
+
+	.let-make {
+		.textbox__text-content {
+			padding-left: 7%;
+		}
+	}
+
+	.story {
+		.content {
+			max-width: 57%
+		}
+
+		.title {
+			margin-bottom: 35px;
+
+			.part {
+				margin-bottom: 23px;
+			}
+		}
+	}
+
+	.Awards {
+		padding: 30px;
+		&>.title {
+			font-size: 2.5rem;
+			padding-left: 5.625rem;
+			padding-bottom: 20px;
+		}
+
+		.content {
+			.grid-item {
+				margin-bottom: 15px;
+			}
+		}
+
+		.award-year {
+			margin-bottom: 50px;
+		}
+	}
+
+	.company-partner,
+	.Our-lead,
+	.Analyst,
+	.Our-location {
+		.title-01 {
+			margin-left: 3%;
+			padding-left: 60px;
+		}
+	}
+
+	.Analyst {
+		padding: 70px 0;
+		.analyst-group .grid-item {
+			position: relative;
+
+			.textbox-06 {
+				padding: 50px 30px 30px;
+				position: relative;
+				height: 100%;
+				background-color: #fff;
+				box-shadow: 0 0.625rem 1.25rem 0 rgba(0, 0, 0, 0.06);
+
+				.title {
+					font-size: 1.125rem;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	.Our-lead {
+		padding: 50px 0;
+	}
+
+	.Our-location {
+		.grid-item {
+			margin-bottom: 10px;
+		}
+	}
+
+	.career-section-01 {
+		.content {
+			.desc {
+				padding: 0 30px;
+			}
+		}
+	}
+
+	.career-section-02 {
+		.content {
+			@include grid-01(1, 1, 2);
+		}
+	}
+
+	.career-section-02 {
+		.content .grid-item:nth-child(2n+1) {
+			.textbox__content-wrapper {
+				right: auto;
+				left: 0;
+			}
+
+			.textbox__image-wrapper {
+				left: 100%;
+				transform: translateX(-100%);
+			}
+		}
+	}
+
+	.Benefits {
+		.text {
+			margin-bottom: 70px;
+		}
+
+		.grid-item {
+			margin-bottom: 15px;
+		}
+	}
+
+	.contact-02 {
+		padding-bottom: 50px;
+
+		.content {
+			width: 90%;
+			margin: 0 auto;
+			max-width: 1500px;
+		}
+
+		.description {
+			padding: 0 50px;
+			margin: 0 auto;
+		}
+	}
+}
+
+@include media('>=lg') {
+	.menu__wrapper {
+		position: static;
+		transform: translateY(0);
+		padding: 0;
+		float: right;
+		background-color: transparent;
+	}
+
+	.header-01 {
+		background-color: transparent;
+		padding: 30px 3.5% 15px;
+		transition: all 0.3s ease-in-out;
+		
+		.header-content {
+			max-width: 1500px;
+			margin: 0 auto;
+		}
+
+		&:after {
+			display: none;
+		}
+
+		&.scrolling {
+			background-color: #fff;
+			padding-top: 15px;
+
+			.logo {
+				padding: 5px 0;
+				margin-left: 10px;
+			}
+
+			.menu__wrapper {
+				margin-right: 10px;
+			}
+		}
+	}
+
+	.trigger-01 {
+		display: none;
+	}
+
+	.logo {
+		height: 49px;
+	}
+
+	.menu-01 {
+		margin-top: 0;
+		.item {
+			display: inline-block;
+
+			a {
+				display: inline-block;
+				font-size: 1rem;
+				font-weight: 500;
+			}
+
+			&.active {
+				position: relative;
+
+				a {
+					color: #223547;
+				}
+
+				&:before {
+					content: '';
+					display: block;
+					width: 100%;
+					height: 2px;
+					background-color: #333;
+					@include absolute(null, 0, 7px, 0);
+					transition: all 0.3s ease-in-out;
+				}
+
+				&:hover {
+					&:before {
+						background-color: #9ab5ce;
+					}
+
+					a {
+						color: #9ab5ce;
+					}
+				}
+			}
+		}
+
+	}
+
+	.hero-section-01 {
+		margin-top: 0;
+
+		.hero-section__text-01 {
+			width: 80%;
+			margin: 0 auto;
+			position: relative;
+			// transform: translateY(-27%);
+			margin-top: -70px;
+
+			.hero-section__title-01 {
+				font-size: 4.5rem;
+
+				&:before {
+					left: -30px;
+				}
+			}
+		}
+	}
+
+	.hero-section-02 {
+		.hero-section__text-01 {
+			width: 80%;
+			margin: 0 auto;
+			padding-left: 30px;
+			padding-top: 90px;
+
+			.hero-section__title-01 {
+				padding-top: 20px;
+				font-size: 5.625rem;
+
+				&:before {
+					transform: translateX(-30px);
+					bottom: calc(100%  + 30px);
+				}
+			}
+		}
+
+		.hero-section__img-wrapper {
+			bottom: 30px !important;
+		}
+	}
+
+	.services-list-content {
+		font-size: 0;
+		
+		.text {
+			padding-right: 150px;
+		}
+
+		.text,
+		.services-gropup {
+			display: inline-block;
+			width: 50%;
+			vertical-align: top;
+		}
+	}
+
+	.brand-01__wrapper {
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1500px;
+
+		.brand__image-item {
+			.image {
+				height: 60px;
+			}
+		}
+	}
+
+	.portpolio-group .textbox-01 .textbox__desc {
+		font-size: 1.125rem;
+	}
+
+	.different-01 .grid-item {
+		margin-bottom: 0;
+	}
+
+	.feature-01-wrapper {
+		transition: all 0.3s ease-in-out;
+		background-color: transparent;
+	}
+
+	.post-01 {
+		.post-01__content {
+			transition: box-shadow 0.3s ease, background-color 0.3s ease;
+			display: block;
+		}
+
+		&:hover {
+			.post-01__content {
+				box-shadow: 0 0.625rem 1.25rem 0 rgba(0, 0, 0, 0.06);
+				background-color: #fff;
+			}
+		}
+	}
+
+	.partner-01__wrapper {
+		.title-01 {
+			font-size: 2.5rem;
+		}
+	}
+
+	.partner-01__content {
+		.textbox__image-wrapper {
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
+
+	.post-group {
+		width: 90%;
+		margin: 0 auto 70px;
+		max-width: 1500px;
+
+		.post-item {
+			background-color: transparent;
+			padding: 35px 0;
+		}
+
+		.post-01 {
+			width: 100%;
+			max-width: auto;
+		}
+	}
+
+	.contact {
+		display: table;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+			@include absolute(0, 0, 0, 0);
+			background-color: #094074;
+			transform: translateX(-50%);
+			z-index: -1;
+		}
+
+		&:after {
+			transform: translateX(50%);
+			background-color: #1c77c3;
+		}
+
+		.left-box,
+		.right-box {
+			display: table-cell;
+			vertical-align: middle;
+			width: 50%;
+			padding: 0;
+
+			.box-content {
+				padding: 60px;
+			}
+		}
+
+		.left-box {
+			padding-left: calc((100% - 1500px) / 2);
+		}
+
+		.right-box {
+			padding-right: calc((100% - 1500px) / 2);
+		}
+
+		.right-box:hover {
+			input[type="text"],
+			input[type="email"] {
+				width: 100%;
+			}
+		}
+	}
+
+	.services-list {
+		margin-bottom: 90px;
+	}
+
+	.service-item {
+		margin-bottom: 10px;
+		.content {
+			font-size: 0;
+		}
+
+		.box-left {
+			display: inline-block;
+			width: 35%;
+			padding-right: 50px;
+			vertical-align: top;
+			
+			.link img {
+				margin-left: 20px;
+				display: inline-block;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.5s ease-in-out;
+			}
+		}
+
+		.box-right {
+			display: inline-block;
+			width: 65%;
+
+			.link-group .textbox-06 {
+				transition: all 0.3s ease-in-out;
+				padding: 50px !important;
+			}
+		}
+
+		&:hover {
+			.box-right .grid-item .textbox-06 {
+				background-color: #fff;
+			}
+
+			.box-left .link img {
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(50px);
+			}
+		}
+	}
+
+	.portpolio-tag,
+	.ideas-tag {
+		padding: 160px 0 0;
+		margin-bottom: 50px;
+
+		.tag-group .tag-item {
+			padding: 17px 23px;
+			letter-spacing: 1.75px;
+		}
+	}
+
+	.footer-01 {
+		.footer-content {
+			display: flex;
+		}
+
+		.footer-info {
+			display: inline-block;
+			width: 70%;
+			margin-bottom: 0;
+			vertical-align: baseline;
+		}
+
+		.footer-link-group {
+			display: inline-block;
+			width: 30%;
+		
+			.link,
+			.social-01 {
+				display: block;
+				width: 100%;
+			}
+
+			.link {
+				margin-bottom: 85px;
+
+				a {
+					display: block;
+					width: 100%;
+				}
+			}
+
+			.social-01 {
+				text-align: left;
+			}
+		}
+	}
+
+	.caseStudy,
+	.Confidential,
+	.Feature-project,
+	.let-make,
+	.ideas-article-group {
+		&>.title {
+			font-size: 2.75rem;
+			margin-left: 70px;
+		}
+	}
+
+	.caseStudy,
+	.ideas-article-group {
+		.grid-item:hover .line {
+			width: 124px;
+		}
+	}
+
+	.ideas-article-feature:hover {
+		.line {
+			width: 124px;
+		}
+	}
+
+	.ideas-article-group {
+		margin-bottom: 30px;
+		.grid-item {
+			margin-bottom: 50px;
+		}
+	}
+
+	.let-make {
+		width: 90%;
+	}
+
+	.Confidential {
+		padding: 0 15px;
+	}
+
+	.slide-01 {
+		padding-top: 90px;
+		padding-bottom: 90px;
+		
+		.content {
+			width: 100%;
+
+			.swiper-slide .button-group {
+				display: none;
+			}
+
+			.swiper-slide.swiper-slide-active .button-group {
+				display: block;
+			}
+		}
+	}
+
+	.story {
+		font-size: 0;
+
+		.title {
+			font-size: 2.5rem;
+		}
+
+		.desc {
+			font-size: 1rem;
+		}
+
+		.box-left,
+		.box-right {
+			vertical-align: top;
+			display: inline-block;
+			width: 50%;
+		}
+	}
+
+	.Awards {
+		padding: 65px;
+
+		&>.title {
+			font-family: "fontSecond";
+			font-weight: 600;
+			max-width: 1500px;
+			margin: 0 auto;
+		}
+
+		.award-year {
+			margin-bottom: 30px;
+			.time {
+				padding-left: 100px;
+				font-size: 1.875rem;
+				font-family: 400px;
+				
+				&:before {
+					width: 60px;
+				}
+
+				&:after {
+					width: calc(100% - 190px);
+				}
+			}
+		}
+
+		.awards__button {
+			margin-bottom: 0;
+		}
+
+		.content {
+			max-width: 1500px;
+			margin: 0 auto;
+		}
+	}
+
+	.company-partner {
+		padding: 60px 0;
+
+		.title-01 {
+			padding-left: 30px;
+		}
+	}
+
+	.Our-lead,
+	.Analyst,
+	.Our-location {
+		padding: 40px 0 70px;
+
+		.title-01 {
+			padding-left: 90px;
+			font-size: 2.5rem;
+			margin-left: 0;
+		}
+	}
+
+	.Our-lead,
+	.Our-location {
+		.content {
+			max-width: 1600px;
+		}
+	}
+
+	.Analyst {
+		padding: 70px 0;
+
+		.content {
+			max-width: 1500px;
+		}
+
+		.grid-item {
+
+			.title:before {
+				transition: all 0.5s ease-in-out;
+			}
+
+			.link {
+				transform: translateY(120px);
+				transition: all 0.5s ease-in-out;
+			}
+
+			.textbox-06 {
+				overflow: hidden;
+			}
+
+			&:hover {
+				.link {
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+
+	.career-section-01 {
+		.content {
+			font-size: 0;
+			display: table;
+
+			.desc {
+				width: 50%;
+				padding: 0 60px;
+				display: table-cell;
+			}
+
+			.career-01__button {
+				display: table-cell;
+				vertical-align: middle;
+				height: 100%;
+				width: 50%;
+			}
+		}
+	}
+
+	.career-section-02 {
+		.content .grid-item:nth-child(2n+1) {
+			.textbox__content-wrapper {
+				right: 0;
+				left: auto;
+			}
+
+			.textbox__image-wrapper {
+				left: auto;
+				transform: translateX(0);
+			}
+		}
+
+		.content .grid-item:nth-child(4n+2),
+		.content .grid-item:nth-child(4n+1){
+			.textbox__content-wrapper {
+				right: auto;
+				left: 0;
+			}
+
+			.textbox__image-wrapper {
+				left: 100%;
+				transform: translateX(-100%);
+			}
+		}
+	}
+
+	.slide-02 {
+		overflow: hidden;
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			display: block;
+		}
+
+		.swiper-pagination {
+			display: none;
+		}
+	}
+
+	.office-swiper {
+		overflow: visible;
+	}
+
+	.Benefits .content {
+		font-size: 0;
+
+		.text {
+			padding-right: 150px;
+
+			.title {
+				font-size: 2.5rem;
+			}
+		}
+
+		.text,
+		.Benefits-gropup {
+			display: inline-block;
+			width: 50%;
+			vertical-align: top;
+		}
+	}
+
+	.contact-02 {
+		padding-bottom: 70px;
+		
+		.content {
+			width: 70%;
+		}
+	}
+}
+
+@include media('>1024px') {
+	
+}
+
+@include media('>=xl') {
+	
+}

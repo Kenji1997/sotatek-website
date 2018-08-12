@@ -1,0 +1,67 @@
+.article-01 {
+	padding-top: 150px;
+	background-color: #fff;
+
+	.article__title {
+		@include font(1.875, 600, #223547);
+		padding-bottom: 18px;
+		position: relative;
+		text-align: center;
+		width: 90%;
+		margin: 0 auto 27px;
+		max-width: 1300px;
+
+		&:before {
+			content: "";
+			display: block;
+			@include absolute(null, 50%, 0);
+			height: 5px;
+			width: 124px;
+			transform: translateX(50%);
+			background-color: #223547;
+		}
+	}
+
+	.article__content-wrapper {
+		background-color: #f8f8f8;
+		padding-bottom: 30px;
+	}
+
+	.article__content {
+		width: 90%;
+		margin: 0 auto;
+		max-width: 1300px;
+		padding: 40px 0;
+	}
+
+	.title-item {
+		@include font(1.5, 600, #223547);
+		margin-bottom: 18px;
+	}
+
+	.link {
+		@include font(1, 600, #1c77c3);
+	}
+
+	.part {
+		margin-bottom: 18px;
+		@include font(1, 400, #223547);
+		line-height: 1.7;
+	}
+
+	@include media('>=lg') {
+		.article__title {
+			font-size: 3.75rem;
+			padding-bottom: 23px;
+		}
+
+		.article__content {
+			width: 50%;
+			padding-top: 80px;
+		}
+
+		.title-item {
+			font-size: 1.875rem;
+		}
+	}
+}
