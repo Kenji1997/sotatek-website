@@ -2,775 +2,302 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Sotatek</title>
+	<title>Web nghe nhạc</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
 	<meta name="format-detection" content="telephone=no">
 	<!-- css -->
 	<link rel="stylesheet" href="assets/css/main.css">
-
-	<script src="assets/js/preload.js"></script>
 </head>
 <body>
-	<div id="preloader">
-		<canvas id="sotatekCanvas"></canvas>
+	<div id="app">
+		<div class="Dashboard-01">
+			<!-- Header-01 -->
+			<div class="Header--01" id="header">
+				<div class="Header__content">
+					<div class="search-wrapper">
+						<div class="search-form-wrapper">
+							<form class="search-form-01">
+								<input type="text" class="input-search-01" placeholder="Nhập từ khoá tìm kiếm ...">
+								<button class="button-search-01" onclick="clickSearchButton"></button>
+							</form>
+						</div>	
+						
+						<!-- suggest track -->
+						<div class="search-result-wrapper" id="search-result-wrapper">
+							<ul class="search-result">
+								<li class="item">
+									<span href="#" class="suggestText" onclick="clickTrackSuggest">
+										anh xin loi
+									</span>
+								</li>
+								<li class="item">
+									<span href="#" class="suggestText" onclick="clickTrackSuggest">
+										anh da sai
+									</span>
+								</li>
+								<!-- { listSuggest } -->
+							</ul>
+						</div>
+						
+						<!-- listTrack -->
+						<div class="listTrack--wrapper" id="listTrack">
+							<div class="modify-listTrack-btn" id="toggle-modify-listTrack">
+								<span class="toggle-list-grid list-btn" id="list-btn"></span>
+								<span class="toggle-list-grid grid-btn" id="grid-btn"></span>
+							</div>
+							<ul class="listTrack">
+								<li class="item">
+									<div class="TrackItem " data-trackIndex="1">
+										<div class="media-wrapper">
+											<img src="assets/images/trackItem.jpeg" alt="bee97" />
+										</div>
+
+										<div class="textbox">
+											<p class="title"> anh xin loi </p>
+											<p class="author"> bee97 </p>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="TrackItem " data-trackIndex="2">
+										<div class="media-wrapper">
+											<img src="assets/images/trackItem.jpeg" alt="bee97" />
+										</div>
+
+										<div class="textbox">
+											<p class="title"> anh xin loi </p>
+											<p class="author"> bee97 </p>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="TrackItem " data-trackIndex="2">
+										<div class="media-wrapper">
+											<img src="assets/images/trackItem.jpeg" alt="bee97" />
+										</div>
+
+										<div class="textbox">
+											<p class="title"> anh xin loi </p>
+											<p class="author"> bee97 </p>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="TrackItem " data-trackIndex="2">
+										<div class="media-wrapper">
+											<img src="assets/images/trackItem.jpeg" alt="bee97" />
+										</div>
+
+										<div class="textbox">
+											<p class="title"> anh xin loi </p>
+											<p class="author"> bee97 </p>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="TrackItem " data-trackIndex="2">
+										<div class="media-wrapper">
+											<img src="assets/images/trackItem.jpeg" alt="bee97" />
+										</div>
+
+										<div class="textbox">
+											<p class="title"> anh xin loi </p>
+											<p class="author"> bee97 </p>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="TrackItem " data-trackIndex="2">
+										<div class="media-wrapper">
+											<img src="assets/images/trackItem.jpeg" alt="bee97" />
+										</div>
+
+										<div class="textbox">
+											<p class="title"> anh xin loi </p>
+											<p class="author"> bee97 </p>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="TrackItem " data-trackIndex="1">
+										<div class="media-wrapper">
+											<img src="assets/images/trackItem.jpeg" alt="bee97" />
+										</div>
+
+										<div class="textbox">
+											<p class="title"> anh xin loi </p>
+											<p class="author"> bee97 </p>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="TrackItem " data-trackIndex="2">
+										<div class="media-wrapper">
+											<img src="assets/images/trackItem.jpeg" alt="bee97" />
+										</div>
+
+										<div class="textbox">
+											<p class="title"> anh xin loi </p>
+											<p class="author"> bee97 </p>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="TrackItem " data-trackIndex="2">
+										<div class="media-wrapper">
+											<img src="assets/images/trackItem.jpeg" alt="bee97" />
+										</div>
+
+										<div class="textbox">
+											<p class="title"> anh xin loi </p>
+											<p class="author"> bee97 </p>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="TrackItem " data-trackIndex="2">
+										<div class="media-wrapper">
+											<img src="assets/images/trackItem.jpeg" alt="bee97" />
+										</div>
+
+										<div class="textbox">
+											<p class="title"> anh xin loi </p>
+											<p class="author"> bee97 </p>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="TrackItem " data-trackIndex="2">
+										<div class="media-wrapper">
+											<img src="assets/images/trackItem.jpeg" alt="bee97" />
+										</div>
+
+										<div class="textbox">
+											<p class="title"> anh xin loi </p>
+											<p class="author"> bee97 </p>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="TrackItem " data-trackIndex="2">
+										<div class="media-wrapper">
+											<img src="assets/images/trackItem.jpeg" alt="bee97" />
+										</div>
+
+										<div class="textbox">
+											<p class="title"> anh xin loi </p>
+											<p class="author"> bee97 </p>
+										</div>
+									</div>
+								</li>
+
+								<p class="load"></p>
+							</ul>
+
+							<!-- { eleLoad } -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="play-view">
+				<!-- images title author -->
+				<div class="play-view-infor-wrapper">
+					<div class="play-view__image-wrapper">
+						<div class="play-view__image">
+							<img src="assets/images/playingTrack.jpeg" alt="track" class="image playing" />
+						</div>
+					</div>
+
+					<div class="textbox-01 play-view__information">
+						<p class="textbox__title"> tình đời </p>
+						<p class="textbox__subtitle"> bee97 </p>
+					</div>
+				</div>
+
+				<div class="pagination-01">
+					<span class="bullet" id="list-track-bullet"></span>
+					<span class="bullet active" id="home-bullet"></span>
+				</div>
+
+				<div class="play-view__control" id="play-view__control">
+					<!-- progress play -->
+					<div class="progress-bar">
+						<!-- <Progress :duration="trackInfor.duration" :trackid="trackInfor.id" :status="status" :currentTimeTrack="this.$props.currentTimeTrack" :seekTime="seekTimeFunc" :errProgress="errPlayView"/> -->
+					</div>
+
+					<div class="control-main-wrapper">
+						<!-- prev, pause/play , next -->
+						<div class="control-main control-main-01">
+							<div class="control-item">
+								<img src="assets/images/prev.png" alt="prev" id="prev_btn"/>
+							</div>
+
+							<div class="control-item" >
+								<img src="assets/images/play.png" alt="status" id="pause_or_play_btn"/>
+							</div>
+
+							<div class="control-item">
+								<img src="assets/images/next.png" alt="next" id="next_btn"/>
+							</div>
+						</div>
+						
+						<!-- volume control -->
+						<div class="speaker-button" id="speaker-button">
+							<img src="assets/images/speaker.png" alt="volume">
+							<!-- <img src="assets/images/speaker.png" alt="volume"  onclick="volumeFunc"> -->
+							
+							<!-- <v-touch @tap="tap_volumeFunc" @panmove="panmove"> -->
+								<div class="speaker-volume" id="speaker-volume">
+									<div class="speaker__progress" id="speakerProgress"></div>
+									<div class="speaker__progress-ball" id="ballVolume">
+										<span class="speaker__progress-ball-content">
+										</span>
+									</div>
+								</div> 
+							<!-- </v-touch> -->
+						</div>
+					</div>
+				</div>
+
+				<audio ref="rainRef" id="audioId" class="audioRain" :src="rainAudio" type="audio/mp3">
+				</audio>
+			</div>
+
+			<!-- background -->
+			<canvas id="Background-Canvas" class="bg-01" ref="background"></canvas>
+
+			<!-- setting -->
+			<div class="setting-btn" id="settingBtn">
+				<img src="assets/images/cog.png" alt="setting">
+			</div>
+			<div class="modal-01" id="modalSetting">
+				<div class="modal-header">
+					<p class="modal__title">Setting</p>
+					<div class="close-btn"></div>
+				</div>
+				<div class="modal-body">
+					<div class="setting__content">
+						<ul class="setting__list">
+							<li class="setting__item" data-target="toggleMenu">
+								<span class="checkbox"></span>
+								<span class="setting__name">hide search</span>
+							</li>
+							<li class="setting__item" data-target="toggleControl">
+								<span class="checkbox"></span>
+								<span class="setting__name">hide control</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	
-	<header class="header-01">
-		<div class="header-content">
-			<a href="index.html" class="logo">
-				<img src="assets/images/logo.png" alt="Sotatek" class="logo__img">
-			</a>
-
-			<nav class="menu__wrapper" id="header-menu">
-				<ul class="menu-01">
-					<li class="item">
-						<a href="Services.html">Services</a>
-					</li>
-
-					<li class="item">
-						<a href="Portfolio.html">Portfolio</a>
-					</li>
-
-					<li class="item">
-						<a href="Company.html">Company</a>
-					</li>
-
-					<li class="item">
-						<a href="Careers.html">Careers</a>
-					</li>
-
-					<li class="item">
-						<a href="Ideas.html">Ideas</a>
-					</li>
-
-					<li class="item">
-						<a href="Contact.html">Contact Us</a>
-					</li>
-				</ul>
-			</nav>
-
-			<div class="trigger-01" id="trigger-mobile">
-				<span class="line"></span>
-			</div>
-		</div>
-	</header>
-
-	<section class="hero-section-01">
-		<div class="hero-section__img-wrapper">
-			<img src="assets/images/hero-section-01.png" alt="sotatek-banner" class="hero-section__img">
-		</div>	
-
-		<div class="hero-section__text-01">
-			<p class="hero-section__title-01">
-				the mobile
-				<br>
-				innovation agency
-			</p>
-
-			<a href="Contact.html" class="hero-section__button button-01">CONTACT US</a>
-		</div>
-	</section>
-
-	<section class="brand-01__wrapper">
-		<div class="brand-01">
-			<p class="brand__title">
-				Creating beautiful digital products engineered to drive growth for the world’s leading brands.
-			</p>
-
-			<div class="brand__image-group">
-				<div class="brand__image-item grid-item">
-					<a href="#" class="text">View Our Portfolio</a>
-					<img src="assets/images/brand1.svg" alt="#" class="image">
-				</div>
-
-				<div class="brand__image-item grid-item">
-					<a href="#" class="text">View Our Portfolio</a>
-					<img src="assets/images/brand2.svg" alt="#" class="image">
-				</div>
-
-				<div class="brand__image-item grid-item">
-					<a href="#" class="text">View Our Portfolio</a>
-					<img src="assets/images/brand3.svg" alt="#" class="image">
-				</div>
-
-				<div class="brand__image-item grid-item">
-					<a href="#" class="text">View Our Portfolio</a>
-					<img src="assets/images/brand4.svg" alt="#" class="image">
-				</div>
-
-				<div class="brand__image-item grid-item">
-					<a href="#" class="text">View Our Portfolio</a>
-					<img src="assets/images/brand5.svg" alt="#" class="image">
-				</div>
-
-				<div class="brand__image-item grid-item">
-					<a href="#" class="text">View Our Portfolio</a>
-					<img src="assets/images/brand6.svg" alt="#" class="image">
-				</div>
-
-				<div class="brand__image-item grid-item">
-					<a href="#" class="text">View Our Portfolio</a>
-					<img src="assets/images/brand7.svg" alt="#" class="image">
-				</div>
-
-				<div class="brand__image-item grid-item">
-					<a href="#" class="text">View Our Portfolio</a>
-					<img src="assets/images/brand8.svg" alt="#" class="image">
-				</div>
-
-				<div class="brand__image-item grid-item">
-					<a href="#" class="text">View Our Portfolio</a>
-					<img src="assets/images/brand9.svg" alt="#" class="image">
-				</div>
-
-				<div class="brand__image-item grid-item">
-					<a href="#" class="text">View Our Portfolio</a>
-					<img src="assets/images/brand10.svg" alt="#" class="image">
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="portpolio-group-01__wrapper">
-		<div class="portpolio-group">
-			<div class="grid-item">
-				<a href="Portpolio_detail.html" class="grid-item-content">
-					<div class="textbox-01">
-						<div class="textbox__image-wrapper">
-							<img src="assets/images/textbox1.png" alt="#" class="textbox__image">
-						</div>
-
-						<div class="textbox__text-content">
-							<p class="textbox__title">
-								Hospitality Apps for Wyndham Hotel Group
-							</p>
-
-							<span class="textbox__desc">
-								The mobile-first reimagination of Wyndham’s guest reward program saw an immediate 241% increase in usage.
-							</span>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="grid-item">
-				<a href="Portpolio_detail.html" class="grid-item-content">
-					<div class="textbox-01">
-						<div class="textbox__image-wrapper">
-							<img src="assets/images/textbox2.png" alt="#" class="textbox__image">
-						</div>
-
-						<div class="textbox__text-content">
-							<p class="textbox__title">
-								Predix for General Electric
-							</p>
-
-							<span class="textbox__desc">
-								Our Predix apps manage data to help industrial clients save money, and improve safety and output.
-							</span>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="grid-item">
-				<a href="Portpolio_detail.html" class="grid-item-content">
-					<div class="textbox-01">
-						<div class="textbox__image-wrapper">
-							<img src="assets/images/textbox3.png" alt="#" class="textbox__image">
-						</div>
-
-						<div class="textbox__text-content">
-							<p class="textbox__title">
-								In-app AR experience for Regal
-							</p>
-
-							<span class="textbox__desc">
-								Augmented Reality experiences seamlessly integrated into the Regal app.
-							</span>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="grid-item">
-				<a href="Portpolio_detail.html" class="grid-item-content">
-					<div class="textbox-01">
-						<div class="textbox__image-wrapper">
-							<img src="assets/images/textbox4.svg" alt="#" class="textbox__image">
-						</div>
-
-						<div class="textbox__text-content">
-							<p class="textbox__title">
-								New York Times features WillowTree
-							</p>
-
-							<span class="textbox__desc">
-								Research by WillowTree on the importance of investing in your mobile brand presence is the cornerstone of this recent NYT piece.
-							</span>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="grid-item">
-				<a href="Portpolio_detail.html" class="grid-item-content">
-					<div class="textbox-01">
-						<div class="textbox__image-wrapper">
-							<img src="assets/images/textbox5.png" alt="#" class="textbox__image">
-						</div>
-
-						<div class="textbox__text-content">
-							<p class="textbox__title">
-								OTT Apps for Canadian Broadcasting Company
-							</p>
-
-							<span class="textbox__desc">
-								Launched CBC’s first ever subscription streaming service and helped them become an Apple launch partner.
-							</span>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="grid-item">
-				<a href="Portpolio_detail.html" class="grid-item-content">
-					<div class="textbox-01">
-						<div class="textbox__image-wrapper">
-							<img src="assets/images/textbox6.png" alt="#" class="textbox__image">
-						</div>
-
-						<div class="textbox__text-content">
-							<p class="textbox__title">
-								Mobile-First Enterprise Solutions
-							</p>
-
-							<span class="textbox__desc">
-								Apps and interfaces guaranteed to drive ROI in everything from field operations and inventory management.
-							</span>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-	</section>
-
-	<section class="different__wrapper">
-		<h3 class="title-01">
-			We're different.
-		</h3>
-
-		<div class="different-01">
-			<div class="grid-item">
-				<a href="Careers.html" class="grid-item__content">
-					<div class="textbox-02">
-						<div class="textbox__image-wrapper">
-							<img src="assets/images/different1.png" alt="#" class="textbox__image">
-						</div>
-
-						<div class="textbox__text-content">
-							<p class="textbox__title">
-								Co-located and on shore teams
-							</p>
-
-							<span class="textbox__desc">
-								Our teams outperform distributed teams every time.
-							</span>
-
-							<div class="line"></div>
-
-							<span class="textbox__link">Learn More</span>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="grid-item">
-				<a href="Careers.html" class="grid-item__content">
-					<div class="textbox-02">
-						<div class="textbox__image-wrapper">
-							<img src="assets/images/different2.png" alt="#" class="textbox__image">
-						</div>
-
-						<div class="textbox__text-content">
-							<p class="textbox__title">
-								Top-tier talent
-							</p>
-
-							<span class="textbox__desc">
-								Recruited from the world's leading universities and tech communities.
-							</span>
-
-							<div class="line"></div>
-
-							<span class="textbox__link">Learn More</span>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="grid-item">
-				<a href="Careers.html" class="grid-item__content">
-					<div class="textbox-02">
-						<div class="textbox__image-wrapper">
-							<img src="assets/images/different3.png" alt="#" class="textbox__image">
-						</div>
-
-						<div class="textbox__text-content">
-							<p class="textbox__title">
-								Low employee turnover drives reliable outcomes
-							</p>
-
-							<span class="textbox__desc">
-								Compare our Glassdoor reviews with the competition's.
-							</span>
-
-							<div class="line"></div>
-
-							<span class="textbox__link">Learn More</span>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="grid-item">
-				<a href="Careers.html" class="grid-item__content">
-					<div class="textbox-02">
-						<div class="textbox__image-wrapper">
-							<img src="assets/images/different4.png" alt="#" class="textbox__image">
-						</div>
-
-						<div class="textbox__text-content">
-							<p class="textbox__title">
-								Largest independent mobile agency in the US
-							</p>
-
-							<span class="textbox__desc">
-								We are responsible to only one stakeholder: our clients.
-							</span>
-
-							<div class="line"></div>
-
-							<span class="textbox__link">Learn More</span>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-	</section>
-
-	<section class="services-01__wrapper">
-		<h3 class="title-01--02">
-			Core Services
-		</h3>
-
-		<div class="services-01">
-			<div class="grid-item">
-				<div class="textbox-04">
-					<p class="textbox__title">
-						Mobile Strategy
-					</p>
-
-					<p class="textbox__desc">
-						We dive into your business model, market challenges, and product positioning, helping you create a product that delivers unique value.
-					</p>
-				</div>
-			</div>
-
-			<div class="grid-item">
-				<div class="textbox-04">
-					<p class="textbox__title">
-						Product Design
-					</p>
-
-					<p class="textbox__desc">
-						Our Product Design team cares for your user’s experience over the entire customer journey, at every touchpoint with your company.
-					</p>
-				</div>
-			</div>
-
-			<div class="grid-item">
-				<div class="textbox-04">
-					<p class="textbox__title">
-						App Development
-					</p>
-
-					<p class="textbox__desc">
-						Our teams stay lean and rapidly deploy customized solutions for each client while constantly learning from and challenging each other.
-					</p>
-				</div>
-			</div>
-
-			<div class="grid-item">
-				<div class="textbox-04">
-					<p class="textbox__title">
-						Mobile Marketing
-					</p>
-
-					<p class="textbox__desc">
-						We carefully craft every single app to give the end-user the best product experience possible, every time they engage—no matter the platform, device, or channel.
-					</p>
-				</div>
-			</div>
-
-			<div class="grid-item">
-				<div class="textbox-04">
-					<p class="textbox__title">
-						Web Development
-					</p>
-
-					<p class="textbox__desc">
-						The modern web isn’t just for static websites and content. It’s the most open, flexible, and immediately accessible application runtime available today.
-					</p>
-				</div>
-			</div>
-
-			<div class="grid-item">
-				<div class="textbox-04">
-					<p class="textbox__title">
-						Emerging Tech/Prototyping
-					</p>
-
-					<p class="textbox__desc">
-						Our Silicon Valley mindset of rapid prototyping combines with user research and iteration to achieve breakthrough results in short engagements.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="feature-01-wrapper">
-		<div class="post-01">
-			<a href="#" class="post-01__content">
-				<div class="textbox-02 textbox-02--01">
-					<div class="textbox__image-wrapper">
-						<img src="assets/images/feature01.svg" alt="#" class="textbox__image">
-					</div>
-
-					<div class="textbox__text-content">
-						<p class="textbox__title">
-							The Executive’s Guide to Driving ROI with Voice Experiences
-						</p>
-
-						<span class="textbox__desc">
-							April 24, 2018
-						</span>
-
-						<span class="textbox__link">Now we're talking</span>
-					</div>
-				</div>
-			</a>
-		</div>
-	</section>
-
-	<section class="partner-01__wrapper">
-		<p class="title-01">We partner with the world’s technology leaders.</p>
-
-		<div class="partner-01__content">
-			<div class="grid-item">
-				<div class="textbox-03">
-					<div class="textbox__image-wrapper">
-						<img src="assets/images/partner1.png" alt="#" class="textbox__image">
-					</div>
-
-					<div class="textbox__text-content">
-						<p class="textbox__title">
-							Google Developer Certified Agency
-						</p>
-
-						<a href="#" class="textbox__link">Learn More</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="grid-item">
-				<div class="textbox-03">
-					<div class="textbox__image-wrapper">
-						<img src="assets/images/partner2.png" alt="#" class="textbox__image">
-					</div>
-
-					<div class="textbox__text-content">
-						<p class="textbox__title">
-							Microsoft Xamarin Certified Premier Consulting Partner
-						</p>
-
-						<a href="#" class="textbox__link">Learn More</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="grid-item">
-				<div class="textbox-03">
-					<div class="textbox__image-wrapper">
-						<img src="assets/images/partner3.png" alt="#" class="textbox__image">
-					</div>
-
-					<div class="textbox__text-content">
-						<p class="textbox__title">
-							Roku Development Partner
-						</p>
-
-						<a href="#" class="textbox__link">Learn More</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="grid-item">
-				<div class="textbox-03">
-					<div class="textbox__image-wrapper">
-						<img src="assets/images/partner4.png" alt="#" class="textbox__image">
-					</div>
-
-					<div class="textbox__text-content">
-						<p class="textbox__title">
-							SAP Consulting Partner Program
-						</p>
-
-						<a href="#" class="textbox__link">Learn More</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="grid-item">
-				<div class="textbox-03">
-					<div class="textbox__image-wrapper">
-						<img src="assets/images/partner5.png" alt="#" class="textbox__image">
-					</div>
-
-					<div class="textbox__text-content">
-						<p class="textbox__title">
-							WillowTree Adobe Solution Partner Program
-						</p>
-
-						<a href="#" class="textbox__link">Learn More</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="post-group">
-		<div class="post-item">
-			<div class="post-01">
-				<a href="#" class="post-01__content">
-					<div class="textbox-02 textbox-02--02">
-						<div class="textbox__image-wrapper">
-							<img src="assets/images/post2.svg" alt="#" class="textbox__image">
-						</div>
-
-						<div class="textbox__text-content">
-							<p class="textbox__title">
-								Report: The importance of treating your brand app as a core product
-							</p>
-
-							<span class="textbox__desc">
-								May 16, 2018
-							</span>
-
-							<span class="textbox__link">
-								See what customers expect from your brand app
-							</span>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		
-		<div class="post-item">
-			<div class="post-01">
-				<a href="#" class="post-01__content">
-					<div class="textbox-02 textbox-02--02">
-						<div class="textbox__image-wrapper">
-							<img src="assets/images/post3.svg" alt="#" class="textbox__image">
-						</div>
-
-						<div class="textbox__text-content">
-							<p class="textbox__title">
-								eBook: Nailing Your Mobile App's Content Strategy: 10 Touchpoints You Can't Ignore
-							</p>
-
-							<span class="textbox__desc">
-								April 19, 2018
-							</span>
-
-							<span class="textbox__link">
-								Download the free eBook
-							</span>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		
-		<div class="post-item">
-			<div class="post-01">
-				<a href="#" class="post-01__content">
-					<div class="textbox-02 textbox-02--02 texbox-02--02">
-						<div class="textbox__image-wrapper">
-							<img src="assets/images/post4.jpeg" alt="#" class="textbox__image">
-						</div>
-
-						<div class="textbox__text-content">
-							<p class="textbox__subtitle">
-								Forrester
-							</p>
-
-							<p class="textbox__title">
-								Forrester names WillowTree a top-five "Strong Performer" in B2C Mobile Services
-							</p>
-
-							<span class="textbox__link">
-								Read More
-							</span>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-	</section>
-
-	<section class="contact">
-		<a href="Portfolio.html" class="left-box">
-			<div class="box-content">
-				<span class="sub-title">
-					Portfolio
-				</span>
-
-				<p class="title">
-					Explore our work.
-				</p>
-
-				<img src="assets/images/arrow.svg" alt="arrow" class="arrow">
-			</div>
-		</a>
-
-		<div class="right-box">
-			<div class="box-content">
-				<p class="title">Contact Us</p>
-				<p class="subtitle">
-					Say hello.
-				</p>
-
-				<form action="" class="form-01" id="contact-form">
-					<div class="input-group-01">
-						<div class="input-item">
-							<input type="text" name="name" id="" required="">
-							<label for="name" class="label-01">
-								<span>Name</span>
-							</label>
-						</div>
-						
-						<div class="input-item">
-							<input type="text" name="company" id="" required="">
-							<label for="company" class="label-01">
-								<span>Company</span>
-							</label>
-						</div>
-						
-						<div class="input-item">
-							<input type="email" name="email" id="" required="">
-							<label for="email" class="label-01">
-								<span>Email</span>
-							</label>
-						</div>
-					</div>
-
-					<div class="input-item">
-						<input type="text" name="content" id="" required="">
-						<label for="content" class="label-01">
-							<span>How can we help</span>
-						</label>
-					</div>
-					
-					<input type="submit" value="SUBMIT" class="button-02">
-				</form>
-			</div>
-		</div>
-	</section>
-
-	<footer class="footer-01">
-		<div class="footer-content">
-			<div class="footer-info">
-				<p class="copyright">
-					&#169; WillowTree, Inc. 2018
-				</p>
-
-				<div class="location-group">
-					<div class="grid-item">
-						<div class="location-item">
-							<p class="location">Virginia</p>
-							<p class="address">
-								107 5th Street SE <br> Charlottesville, VA 22902 <br> USA
-							</p>
-						</div>
-					</div>
-
-					<div class="grid-item">
-						<div class="location-item">
-							<p class="location">North Carolina</p>
-							<p class="address">
-								324 Blackwell Street, Suite 1040 <br> Durham, NC 27701 <br> USA
-							</p>
-							<a href="#" class="location-direction">Directions</a>
-						</div>
-					</div>
-
-					<div class="grid-item">
-						<div class="location-item">
-							<p class="location">New York</p>
-							<p class="address">
-								125 Park Avenue, 25th Floor <br> New York, NY 10017<br> USA
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="footer-link-group">
-				<div class="link">
-					<a href="poicy.html">Privacy Policy</a>
-					<a href="poicy.html">Media Inquiries</a>
-					<a href="poicy.html">Social Impact</a>
-				</div>
-
-				<ul class="social-01">
-					<li class="item">
-						<a href="#">
-							<img src="assets/images/social/facebook.svg" alt="facebook">
-						</a>
-					</li>
-
-					<li class="item">
-						<a href="#">
-							<img src="assets/images/social/twitter.svg" alt="twitter">
-						</a>
-					</li>
-
-					<li class="item">
-						<a href="#">
-							<img src="assets/images/social/linkedin.svg" alt="linkedin">
-						</a>
-					</li>
-
-					<li class="item">
-						<a href="#">
-							<img src="assets/images/social/dribbble.svg" alt="dribbble">
-						</a>
-					</li>
-
-					<li class="item">
-						<a href="#">
-							<img src="assets/images/social/rss.svg" height="21" class="fixHeight" alt="rss">
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</footer>
 </body>
 <!-- js -->
 <script src="assets/js/vendor/jquery-3.2.1.min.js"></script>
 <script src="assets/js/vendor/swiper.js"></script>
 <script src="assets/js/vendor/swiper.jquery.js"></script>
+<script src="assets/js/background.js"></script>
 <script src="assets/js/main.js"></script>
 </html>
