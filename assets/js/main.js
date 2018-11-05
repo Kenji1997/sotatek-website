@@ -114,6 +114,37 @@ window.addEventListener('DOMContentLoaded', function(){
     globalEvent.reset();
   });
 
+  // handle swiper on desktop
+  dashBoard.addEventListener('mousedown', function(e){
+    mouseObject.setCurrentPos( e.pageX, e.pageY );
+    console.log(e.pageX, e.pageY);
+  })
+
+  dashBoard.addEventListener('mouseup', function(e){
+    // mouseObject.setCurrentPos( e.pageX, e.pageY );
+    if (mouseObject.isSwipeRight(e.pageX, e.pageY)) {
+      globalEvent.swipeRight = true;
+    }
+
+    if(mouseObject.isSwipeLeft(e.pageX, e.pageY)) {
+      globalEvent.swipeLeft = true;
+    };
+
+    // handle show list track
+    if (globalEvent.swipeRight) {
+      listTrack.classList.add('show');
+      bulletListTrack.classList.add('active');
+      bulletHome.classList.remove('active');
+    } else if (globalEvent.swipeLeft) {
+      listTrack.classList.remove('show');
+      bulletListTrack.classList.remove('active');
+      bulletHome.classList.add('active');
+    }
+
+    // reset globalEvent
+    globalEvent.reset();
+  })
+
   // handle toggle speaker-button
   speakerButton.addEventListener('click', function(){
     this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active');
